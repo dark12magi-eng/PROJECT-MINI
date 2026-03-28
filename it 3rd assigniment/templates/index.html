@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Programming System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-5.3.8-dist/css/bootstrap-grid.min.css') }}">
+</head>
+
+<body class="bg-light">
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <span class="navbar-brand">Python Programming System</span>
+    </div>
+</nav>
+
+<div class="container mt-4">
+<form method="POST">
+<div class="row g-4">
+
+<!-- Add -->
+<div class="col-md-6">
+<div class="card shadow"><div class="card-body">
+<h5>Add Two Numbers</h5>
+<input name="a" class="form-control" placeholder="Enter first number">
+<input name="b" class="form-control mt-2" placeholder="Enter second number">
+<button name="action" value="sum" class="btn btn-primary mt-2">Add</button>
+<p class="mt-2">Result: {{ results.sum }}</p>
+</div></div></div>
+
+<!-- Odd Even -->
+<div class="col-md-6">
+<div class="card shadow"><div class="card-body">
+<h5>Odd or Even</h5>
+<input name="num" class="form-control" placeholder="Enter a number">
+<button name="action" value="odd_even" class="btn btn-success mt-2">Check</button>
+<p class="mt-2">Result: {{ results.odd_even }}</p>
+</div></div></div>
+
+<!-- Loop -->
+<div class="col-md-6">
+<div class="card shadow"><div class="card-body">
+<h5>Print Numbers 1–10</h5>
+<button name="action" value="loop" class="btn btn-warning">Print Numbers</button>
+<p class="mt-2">Result: {{ results.loop }}</p>
+</div></div></div>
+
+<!-- Largest -->
+<div class="col-md-6">
+<div class="card shadow"><div class="card-body">
+<h5>Largest of 3 Numbers</h5>
+<input name="x" class="form-control" placeholder="Enter first number">
+<input name="y" class="form-control mt-2" placeholder="Enter second number">
+<input name="z" class="form-control mt-2" placeholder="Enter third number">
+<button name="action" value="largest" class="btn btn-info mt-2">Find Largest</button>
+<p class="mt-2">Result: {{ results.largest }}</p>
+</div></div></div>
+
+<!-- Factorial -->
+<div class="col-md-6">
+<div class="card shadow"><div class="card-body">
+<h5>Factorial</h5>
+<input name="fact" class="form-control" placeholder="Enter a number">
+<button name="action" value="factorial" class="btn btn-dark mt-2">Calculate</button>
+<p class="mt-2">Result: {{ results.factorial }}</p>
+</div></div></div>
+
+<!-- Table -->
+<div class="col-md-6">
+<div class="card shadow"><div class="card-body">
+<h5>Multiplication Table</h5>
+<input name="table" class="form-control" placeholder="Enter a number">
+<button name="action" value="table" class="btn btn-secondary mt-2">Show Table</button>
+<p class="mt-2">{{ results.table|safe }}</p>
+</div></div></div>
+
+<!-- If Else -->
+<div class="col-md-6">
+<div class="card shadow"><div class="card-body">
+<h5>If vs Else If</h5>
+<input name="ifnum" class="form-control" placeholder="Enter a number">
+<button name="action" value="if_else" class="btn btn-primary mt-2">Check</button>
+<p class="mt-2">Result: {{ results.if_else }}</p>
+</div></div></div>
+
+<!-- Loop Example -->
+<div class="col-md-6">
+<div class="card shadow"><div class="card-body">
+<h5>Loop Example</h5>
+<input name="loopnum" class="form-control" placeholder="Enter how many numbers">
+<button name="action" value="loop_explain" class="btn btn-success mt-2">Run Loop</button>
+<p class="mt-2">Result: {{ results.loop_explain }}</p>
+</div></div></div>
+
+<!-- Salary Automation -->
+<div class="col-md-6">
+<div class="card shadow"><div class="card-body">
+<h5>Salary Automation System</h5>
+<input name="salary" class="form-control" placeholder="Enter salary">
+<input name="bonus" class="form-control mt-2" placeholder="Enter bonus">
+<button name="action" value="importance" class="btn btn-warning mt-2">Calculate Salary</button>
+<p class="mt-2">{{ results.importance|safe }}</p>
+</div></div></div>
+
+<!-- Banking & School -->
+<div class="col-md-6">
+<div class="card shadow"><div class="card-body">
+<h5>Banking & School System</h5>
+<input name="deposit" class="form-control" placeholder="Enter deposit amount">
+<input name="marks" class="form-control mt-2" placeholder="Enter student marks">
+<button name="action" value="systems" class="btn btn-dark mt-2">Run System</button>
+<p class="mt-2">{{ results.systems|safe }}</p>
+</div></div></div>
+
+</div>
+</form>
+</div>
+
+<script src="{{ url_for('static', filename='bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js') }}"></script>
+
+</body>
+</html>
